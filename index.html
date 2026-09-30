@@ -1,0 +1,3288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+      content="#12050c">
+
+<title>
+    Happy Birthday, My Love ❤️
+</title>
+
+
+<style>
+
+/* =====================================================
+   FONTS
+===================================================== */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap'
+);
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    background:#080306;
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,70,120,.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(190,40,90,.10),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255,0,80,.04),
+            transparent 45%
+        );
+
+    pointer-events:none;
+
+    z-index:-2;
+}
+
+
+/* =====================================================
+   PARTICLE CANVAS
+===================================================== */
+
+canvas{
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-btn{
+
+    position:fixed;
+
+    right:20px;
+    top:20px;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    z-index:1000;
+
+    font-size:19px;
+
+    transition:.3s;
+}
+
+
+.music-btn:hover{
+
+    transform:scale(1.08);
+
+    background:
+        rgba(255,80,130,.2);
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:999;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(130,10,50,.28),
+            transparent 45%
+        ),
+
+        #080306;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    transition:1s ease;
+}
+
+
+.intro.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+
+.intro-content{
+
+    width:min(90%,650px);
+
+    animation:introIn 1.4s ease;
+
+}
+
+
+.intro-heart{
+
+    font-size:58px;
+
+    margin-bottom:22px;
+
+    animation:
+        heartBeat 1.5s infinite;
+
+}
+
+
+.intro-small{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#d9a4b6;
+
+    margin-bottom:16px;
+
+}
+
+
+.intro h1{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(45px,8vw,82px);
+
+    font-weight:500;
+
+    line-height:.95;
+
+    margin-bottom:22px;
+
+}
+
+
+.intro p{
+
+    color:#c5afb7;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    margin-bottom:32px;
+
+}
+
+
+.open-btn{
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        linear-gradient(
+            135deg,
+            #a91d4d,
+            #64102f
+        );
+
+    color:#fff;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    box-shadow:
+        0 10px 40px
+        rgba(190,20,80,.25);
+
+    transition:.35s;
+}
+
+
+.open-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 50px
+        rgba(190,20,80,.4);
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+    position:relative;
+}
+
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+
+.hero-label{
+
+    color:#e1a1b5;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    margin-bottom:25px;
+
+}
+
+
+.hero h1{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(65px,12vw,150px);
+
+    font-weight:500;
+
+    line-height:.8;
+
+    margin-bottom:28px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff,
+            #f5b7ca,
+            #fff
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+.hero h2{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(28px,5vw,55px);
+
+    font-weight:400;
+
+    color:#e9bac9;
+
+    margin-bottom:25px;
+
+}
+
+
+.hero-description{
+
+    max-width:580px;
+
+    margin:auto;
+
+    color:#aa969e;
+
+    line-height:1.9;
+
+    font-size:14px;
+
+}
+
+
+.scroll{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#8f747e;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+.scroll span{
+
+    display:block;
+
+    margin-top:10px;
+
+    animation:bounce 1.5s infinite;
+
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+section{
+
+    padding:120px 20px;
+
+}
+
+
+.container{
+
+    width:min(1100px,100%);
+
+    margin:auto;
+
+}
+
+
+.section-label{
+
+    text-align:center;
+
+    color:#c87996;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(42px,6vw,68px);
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+}
+
+
+.section-subtitle{
+
+    max-width:600px;
+
+    margin:
+        0 auto 55px;
+
+    text-align:center;
+
+    color:#98858d;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+.cake-section{
+
+    text-align:center;
+
+}
+
+
+.cake{
+
+    width:190px;
+
+    height:125px;
+
+    margin:
+        90px auto 45px;
+
+    position:relative;
+
+}
+
+
+.cake-bottom{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:190px;
+
+    height:70px;
+
+    border-radius:
+        8px 8px 20px 20px;
+
+    background:
+        linear-gradient(
+            #e95786,
+            #a8174c
+        );
+
+    box-shadow:
+        0 15px 50px
+        rgba(220,30,100,.25);
+
+}
+
+
+.cake-top{
+
+    position:absolute;
+
+    bottom:58px;
+
+    left:0;
+
+    width:190px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    background:#ff9cba;
+
+}
+
+
+.cake-cream{
+
+    position:absolute;
+
+    bottom:42px;
+
+    left:10px;
+
+    width:170px;
+
+    height:35px;
+
+    border-radius:
+        0 0 50% 50%;
+
+    background:#fff1f5;
+
+}
+
+
+/* =====================================================
+   CANDLE
+===================================================== */
+
+.candle{
+
+    position:absolute;
+
+    width:14px;
+
+    height:58px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f5d6df,
+            #fff,
+            #f5d6df
+        );
+
+    top:0;
+
+    left:88px;
+
+    border-radius:4px;
+
+    z-index:10;
+
+    cursor:pointer;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.candle:hover{
+
+    transform:
+        scale(1.06);
+
+}
+
+
+.flame{
+
+    position:absolute;
+
+    width:19px;
+
+    height:27px;
+
+    top:-27px;
+
+    left:-2.5px;
+
+    background:#ffb13b;
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    box-shadow:
+        0 0 10px #ffb13b,
+        0 0 25px #ff7b00,
+        0 0 45px rgba(255,100,0,.5);
+
+    animation:
+        flame 1s infinite alternate;
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+
+}
+
+
+/* Candle extinguished */
+
+.flame.off{
+
+    opacity:0;
+
+    transform:
+        scale(.1)
+        translateY(15px);
+
+    animation:none;
+
+}
+
+
+/* Candle hint */
+
+.candle::after{
+
+    content:"Click me";
+
+    position:absolute;
+
+    top:-60px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    white-space:nowrap;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    color:#cda4b2;
+
+    opacity:.7;
+
+    transition:.3s;
+
+}
+
+
+.candle:hover::after{
+
+    opacity:1;
+
+}
+
+
+/* =====================================================
+   ENVELOPE / LOVE LETTER
+===================================================== */
+
+.envelope-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:500px;
+
+    perspective:1200px;
+
+}
+
+
+.envelope{
+
+    width:min(520px,90vw);
+
+    height:340px;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+}
+
+
+/* Envelope back */
+
+.envelope-back{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #8e1743,
+            #5d0d2c
+        );
+
+    border-radius:8px;
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(0,0,0,.45),
+
+        0 0 40px
+        rgba(180,30,90,.12);
+
+    z-index:1;
+
+}
+
+
+/* Letter paper */
+
+.letter-paper{
+
+    position:absolute;
+
+    left:5%;
+
+    width:90%;
+
+    bottom:8px;
+
+    height:300px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf7,
+            #f8e9ed
+        );
+
+    border-radius:6px;
+
+    color:#4b2633;
+
+    padding:35px 30px;
+
+    overflow:hidden;
+
+    transform:translateY(0);
+
+    transition:
+
+        transform 1.3s
+        cubic-bezier(.65,.05,.36,1),
+
+        height 1s ease;
+
+    z-index:3;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.2);
+
+}
+
+
+/* Letter content */
+
+.letter-content{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    text-align:left;
+
+    height:100%;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+}
+
+
+.letter-content::-webkit-scrollbar{
+
+    width:3px;
+
+}
+
+
+.letter-content::-webkit-scrollbar-thumb{
+
+    background:#c06a88;
+
+    border-radius:10px;
+
+}
+
+
+/* Letter lines */
+
+.letter-line{
+
+    opacity:0;
+
+    transform:
+        translateY(15px);
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
+
+    margin-bottom:20px;
+
+}
+
+
+.letter-line.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* Signature */
+
+.signature{
+
+    text-align:right;
+
+    font-size:25px;
+
+    color:#9e3158;
+
+    margin-top:30px;
+
+}
+
+
+/* Envelope front */
+
+.envelope-front{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:72%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #a51e50,
+            #721137
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            50% 58%,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+
+    border-radius:
+        0 0 8px 8px;
+
+    z-index:5;
+
+}
+
+
+/* Envelope flap */
+
+.envelope-flap{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:58%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #b7285c,
+            #781337
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform 1s
+        cubic-bezier(.65,.05,.36,1);
+
+    z-index:7;
+
+}
+
+
+/* Open letter button */
+
+.open-letter-btn{
+
+    position:absolute;
+
+    left:50%;
+
+    top:56%;
+
+    transform:
+        translate(-50%,-50%);
+
+    z-index:10;
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    background:
+        linear-gradient(
+            135deg,
+            #d93d73,
+            #94143f
+        );
+
+    color:#fff;
+
+    padding:14px 27px;
+
+    border-radius:50px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 10px 35px
+        rgba(0,0,0,.3),
+
+        0 0 25px
+        rgba(220,40,100,.25);
+
+    transition:
+
+        opacity .5s ease,
+
+        transform .3s ease;
+
+}
+
+
+.open-letter-btn:hover{
+
+    transform:
+        translate(-50%,-50%)
+        scale(1.06);
+
+}
+
+
+/* Opened envelope */
+
+.envelope.open
+.envelope-flap{
+
+    transform:
+        rotateX(180deg);
+
+    z-index:2;
+
+}
+
+
+.envelope.open
+.letter-paper{
+
+    transform:
+        translateY(-210px);
+
+    z-index:8;
+
+    height:470px;
+
+}
+
+
+.envelope.open
+.open-letter-btn{
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.7);
+
+}
+
+
+/* =====================================================
+   MEMORY SECTION
+===================================================== */
+
+.memory-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+
+.memory{
+
+    height:390px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#18080e;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+}
+
+
+.memory img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s;
+
+}
+
+
+.memory:hover img{
+
+    transform:scale(1.07);
+
+}
+
+
+.memory::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            transparent 45%,
+            rgba(0,0,0,.8)
+        );
+
+}
+
+
+.memory-text{
+
+    position:absolute;
+
+    bottom:22px;
+
+    left:22px;
+
+    right:22px;
+
+    z-index:2;
+
+}
+
+
+.memory-text h3{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:27px;
+
+    font-weight:500;
+
+}
+
+
+.memory-text p{
+
+    font-size:11px;
+
+    color:#c5b5bb;
+
+    margin-top:5px;
+
+}
+
+
+/* =====================================================
+   COUNTER
+===================================================== */
+
+.counter-section{
+
+    text-align:center;
+
+}
+
+
+.counter{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:50px;
+
+}
+
+
+.counter-box{
+
+    width:125px;
+
+    padding:25px 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.025);
+
+    border-radius:15px;
+
+}
+
+
+.counter-box strong{
+
+    display:block;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    color:#f0bdcc;
+
+}
+
+
+.counter-box span{
+
+    color:#83747a;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+.final-content{
+
+    max-width:850px;
+
+}
+
+
+.final-heart{
+
+    font-size:70px;
+
+    animation:
+        heartBeat 1.5s infinite;
+
+    margin-bottom:25px;
+
+}
+
+
+.final h2{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(48px,8vw,85px);
+
+    font-weight:500;
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+}
+
+
+.final p{
+
+    color:#a9959d;
+
+    line-height:2;
+
+    max-width:600px;
+
+    margin:auto;
+
+}
+
+
+.final-name{
+
+    margin-top:40px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    color:#e8aabd;
+
+    font-size:32px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    color:#64565c;
+
+    font-size:11px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.05);
+
+}
+
+
+footer span{
+
+    color:#a7355e;
+
+}
+
+
+/* =====================================================
+   FALLING STARS
+===================================================== */
+
+.star{
+
+    position:fixed;
+
+    top:-25px;
+
+    pointer-events:none;
+
+    z-index:9998;
+
+    color:#fff;
+
+    font-size:
+        var(--size);
+
+    opacity:
+        var(--opacity);
+
+    text-shadow:
+
+        0 0 5px
+        rgba(255,255,255,.95),
+
+        0 0 12px
+        rgba(255,200,220,.85),
+
+        0 0 25px
+        rgba(255,100,160,.45);
+
+    animation:
+
+        starFall
+        var(--duration)
+        linear
+        forwards;
+
+}
+
+
+@keyframes starFall{
+
+    0%{
+
+        transform:
+
+            translate3d(
+                0,
+                -30px,
+                0
+            )
+
+            rotate(0deg)
+
+            scale(.5);
+
+        opacity:0;
+
+    }
+
+
+    10%{
+
+        opacity:1;
+
+    }
+
+
+    50%{
+
+        transform:
+
+            translate3d(
+                var(--drift),
+                50vh,
+                0
+            )
+
+            rotate(180deg)
+
+            scale(1);
+
+    }
+
+
+    100%{
+
+        transform:
+
+            translate3d(
+                var(--drift2),
+                110vh,
+                0
+            )
+
+            rotate(360deg)
+
+            scale(.4);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =====================================================
+   GENERAL ANIMATIONS
+===================================================== */
+
+@keyframes introIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes heartBeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    15%{
+
+        transform:scale(1.18);
+
+    }
+
+    30%{
+
+        transform:scale(1);
+
+    }
+
+    45%{
+
+        transform:scale(1.1);
+
+    }
+
+}
+
+
+@keyframes flame{
+
+    from{
+
+        transform:
+            scaleY(1)
+            rotate(-2deg);
+
+    }
+
+    to{
+
+        transform:
+            scaleY(1.15)
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(8px);
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:800px){
+
+    section{
+
+        padding:
+            90px 18px;
+
+    }
+
+
+    .memory-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .memory{
+
+        height:430px;
+
+    }
+
+
+    .hero{
+
+        min-height:95vh;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .envelope-area{
+
+        min-height:460px;
+
+    }
+
+
+    .envelope{
+
+        height:290px;
+
+    }
+
+
+    .letter-paper{
+
+        height:255px;
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    .letter-content{
+
+        font-size:16px;
+
+        line-height:1.65;
+
+    }
+
+
+    .envelope.open
+    .letter-paper{
+
+        transform:
+            translateY(-180px);
+
+        height:420px;
+
+    }
+
+
+    .open-letter-btn{
+
+        font-size:12px;
+
+        padding:
+            13px 22px;
+
+    }
+
+
+    .star{
+
+        font-size:
+            calc(
+                var(--size) * .8
+            );
+
+    }
+
+}
+
+
+@media(max-width:450px){
+
+    .intro-heart{
+
+        font-size:48px;
+
+    }
+
+
+    .intro h1{
+
+        font-size:48px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:65px;
+
+    }
+
+
+    .counter-box{
+
+        width:
+            calc(50% - 10px);
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PARTICLE BACKGROUND
+===================================================== -->
+
+<canvas id="particles"></canvas>
+
+
+<!-- =====================================================
+     NORMAL MUSIC
+===================================================== -->
+
+<button
+    class="music-btn"
+    id="musicBtn"
+>
+    ♫
+</button>
+
+
+<audio
+    id="music"
+    loop
+>
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<!-- =====================================================
+     HAPPY BIRTHDAY SONG
+===================================================== -->
+
+<audio
+    id="birthdaySong"
+>
+
+    <source
+        src="birthday.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div
+    class="intro"
+    id="intro"
+>
+
+    <div class="intro-content">
+
+
+        <div class="intro-heart">
+            ❤️
+        </div>
+
+
+        <div class="intro-small">
+
+            A Little Surprise For You
+
+        </div>
+
+
+        <h1>
+
+            Someone Special<br>
+
+            Has A Birthday
+
+        </h1>
+
+
+        <p>
+
+            There is something I made especially for you.<br>
+
+            Take a moment, breathe,
+            and open this little surprise.
+
+        </p>
+
+
+        <button
+            class="open-btn"
+            id="openBtn"
+        >
+
+            Open Your Surprise ❤️
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+
+        <div class="hero-label">
+
+            Today is all about you
+
+        </div>
+
+
+        <h1>
+
+            Happy<br>
+
+            Birthday
+
+        </h1>
+
+
+        <h2>
+
+            My Beautiful Love ❤️
+
+        </h2>
+
+
+        <p class="hero-description">
+
+            Today isn't just another day.
+
+            It's the day someone incredibly
+            special came into this world.
+
+            And I'm grateful that somehow,
+            our paths crossed.
+
+        </p>
+
+
+    </div>
+
+
+    <div class="scroll">
+
+        Scroll to discover
+
+        <span>
+            ↓
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CAKE
+===================================================== -->
+
+<section class="cake-section">
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Make a wish
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Your Special Day
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Close your eyes,
+            make a wish and click the candle
+            when you're ready. ❤️
+
+        </p>
+
+
+        <div class="cake">
+
+
+            <!-- CANDLE -->
+
+            <div
+                class="candle"
+                id="birthdayCandle"
+            >
+
+                <div
+                    class="flame"
+                    id="candleFlame"
+                ></div>
+
+            </div>
+
+
+            <div class="cake-top"></div>
+
+
+            <div class="cake-cream"></div>
+
+
+            <div class="cake-bottom"></div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOVE LETTER
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            From my heart
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            A Letter For You
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            There is something I want to tell you...
+
+        </p>
+
+
+        <div class="envelope-area">
+
+
+            <div
+                class="envelope"
+                id="envelope"
+            >
+
+
+                <!-- LETTER -->
+
+                <div
+                    class="letter-paper"
+                    id="letterPaper"
+                >
+
+                    <div class="letter-content">
+
+
+                        <p class="letter-line">
+
+                            My love,
+
+                        </p>
+
+
+                        <p class="letter-line">
+
+                            Happy Birthday to the most beautiful
+                            person in my life.
+
+                            I honestly don't know if words
+                            will ever be enough to explain
+                            how much you mean to me.
+
+                        </p>
+
+
+                        <p class="letter-line">
+
+                            Since you came into my life,
+                            ordinary moments somehow became special.
+
+                            Your smile, your voice,
+                            your little habits,
+                            even the smallest conversations
+                            with you are memories that I secretly
+                            keep close to my heart.
+
+                        </p>
+
+
+                        <p class="letter-line">
+
+                            On your birthday,
+                            I don't just wish you happiness.
+
+                            I wish you a life full of beautiful
+                            moments, peaceful nights,
+                            exciting dreams and everything
+                            your heart truly deserves.
+
+                        </p>
+
+
+                        <p class="letter-line">
+
+                            And if life ever gets difficult,
+                            I hope you always remember that
+                            there will be someone cheering for you,
+                            believing in you and wanting to see
+                            you smile.
+
+                        </p>
+
+
+                        <p class="letter-line">
+
+                            Thank you for being you.
+
+                            Thank you for existing.
+
+                            And most importantly,
+                            thank you for being a part of my story.
+
+                        </p>
+
+
+                        <div
+                            class="signature letter-line"
+                        >
+
+                            Forever yours,<br>
+
+                            Your Love ❤️
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- ENVELOPE BACK -->
+
+                <div class="envelope-back"></div>
+
+
+                <!-- ENVELOPE FRONT -->
+
+                <div class="envelope-front"></div>
+
+
+                <!-- ENVELOPE FLAP -->
+
+                <div class="envelope-flap"></div>
+
+
+                <!-- OPEN BUTTON -->
+
+                <button
+                    class="open-letter-btn"
+                    id="openLetterBtn"
+                >
+
+                    Open Letter ❤️
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Little pieces of us
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Our Memories
+
+        </h2>
+
+
+
+        <div class="memory-grid">
+
+
+            <div class="memory">
+
+
+                <img
+                    src="photo1.jpg"
+                    alt="Our Memory"
+                >
+
+
+                <div class="memory-text">
+
+
+                    <h3>
+
+                        The Beginning
+
+                    </h3>
+
+
+                    <p>
+
+                        Where our little story started.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="memory">
+
+
+                <img
+                    src="photo2.jpg"
+                    alt="Our Memory"
+                >
+
+
+                <div class="memory-text">
+
+
+                    <h3>
+
+                        That Beautiful Moment
+
+                    </h3>
+
+
+                    <p>
+
+                        A memory I'll always keep.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="memory">
+
+
+                <img
+                    src="photo3.jpg"
+                    alt="Our Memory"
+                >
+
+
+                <div class="memory-text">
+
+
+                    <h3>
+
+                        Us
+
+                    </h3>
+
+
+                    <p>
+
+                        My favorite place is beside you.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOVE COUNTER
+===================================================== -->
+
+<section class="counter-section">
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            And the story continues
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Every Moment With You
+
+        </h2>
+
+
+
+
+
+        <div class="counter">
+
+
+            <div class="counter-box">
+
+                <strong id="days">
+                    0
+                </strong>
+
+                <span>
+                    Days
+                </span>
+
+            </div>
+
+
+            <div class="counter-box">
+
+                <strong id="hours">
+                    0
+                </strong>
+
+                <span>
+                    Hours
+                </span>
+
+            </div>
+
+
+            <div class="counter-box">
+
+                <strong id="minutes">
+                    0
+                </strong>
+
+                <span>
+                    Minutes
+                </span>
+
+            </div>
+
+
+            <div class="counter-box">
+
+                <strong id="seconds">
+                    0
+                </strong>
+
+                <span>
+                    Seconds
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL MESSAGE
+===================================================== -->
+
+<section class="final">
+
+    <div class="final-content">
+
+
+        <div class="final-heart">
+
+            ❤️
+
+        </div>
+
+
+        <div class="section-label">
+
+            One last thing
+
+        </div>
+
+
+        <h2>
+
+            You Are<br>
+
+            My Favorite Person
+
+        </h2>
+
+
+        <p>
+
+            Out of all the people in this huge world,
+            I'm just really lucky that I got to meet you.
+
+            <br><br>
+
+            I hope this birthday brings you
+            as much happiness as your presence
+            has brought into my life.
+
+            <br><br>
+
+            Keep smiling.
+            Keep dreaming.
+            Keep being the amazing person you are.
+
+            <br><br>
+
+            And remember...
+
+            <br><br>
+
+            <strong>
+
+                You are loved.
+                More than you know. ❤️
+
+            </strong>
+
+        </p>
+
+
+        <div class="final-name">
+
+            Happy Birthday, My Love
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    Made with
+    <span>♥</span>
+    especially for you.
+
+</footer>
+
+
+<script>
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const intro =
+    document.getElementById("intro");
+
+
+const openBtn =
+    document.getElementById("openBtn");
+
+
+const music =
+    document.getElementById("music");
+
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+
+const birthdaySong =
+    document.getElementById("birthdaySong");
+
+
+const birthdayCandle =
+    document.getElementById("birthdayCandle");
+
+
+const candleFlame =
+    document.getElementById("candleFlame");
+
+
+const envelope =
+    document.getElementById("envelope");
+
+
+const openLetterBtn =
+    document.getElementById("openLetterBtn");
+
+
+const letterLines =
+    document.querySelectorAll(".letter-line");
+
+
+/* =====================================================
+   MUSIC STATE
+===================================================== */
+
+let playing = false;
+
+
+/* =====================================================
+   OPEN SURPRISE
+===================================================== */
+
+openBtn.addEventListener(
+    "click",
+    () => {
+
+        intro.classList.add("hide");
+
+        music.play().catch(
+            () => {}
+        );
+
+        playing = true;
+
+        musicBtn.innerHTML = "❚❚";
+
+    }
+);
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+musicBtn.addEventListener(
+    "click",
+    () => {
+
+        if(playing){
+
+            music.pause();
+
+            musicBtn.innerHTML = "♫";
+
+            playing = false;
+
+        }
+
+        else{
+
+            music.play().catch(
+                () => {}
+            );
+
+            musicBtn.innerHTML = "❚❚";
+
+            playing = true;
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   RELATIONSHIP COUNTER
+===================================================== */
+
+
+/*
+    CHANGE THIS DATE.
+
+    Example:
+
+    2025-01-01T00:00:00
+
+*/
+
+const relationshipDate =
+    new Date(
+        "2021-12-25T20:00:00"
+    );
+
+
+function updateCounter(){
+
+    const now =
+        new Date();
+
+
+    let difference =
+        now - relationshipDate;
+
+
+    if(difference < 0){
+
+        difference = 0;
+
+    }
+
+
+    const days =
+        Math.floor(
+            difference / 86400000
+        );
+
+
+    const hours =
+        Math.floor(
+            (difference % 86400000)
+            / 3600000
+        );
+
+
+    const minutes =
+        Math.floor(
+            (difference % 3600000)
+            / 60000
+        );
+
+
+    const seconds =
+        Math.floor(
+            (difference % 60000)
+            / 1000
+        );
+
+
+    document.getElementById(
+        "days"
+    ).innerText = days;
+
+
+    document.getElementById(
+        "hours"
+    ).innerText = hours;
+
+
+    document.getElementById(
+        "minutes"
+    ).innerText = minutes;
+
+
+    document.getElementById(
+        "seconds"
+    ).innerText = seconds;
+
+}
+
+
+setInterval(
+    updateCounter,
+    1000
+);
+
+
+updateCounter();
+
+
+/* =====================================================
+   CANDLE CLICK
+===================================================== */
+
+let candleBlown = false;
+
+
+birthdayCandle.addEventListener(
+    "click",
+    () => {
+
+        /*
+            Prevent the candle from
+            triggering more than once.
+        */
+
+        if(candleBlown){
+
+            return;
+
+        }
+
+
+        candleBlown = true;
+
+
+        /* Extinguish flame */
+
+        candleFlame.classList.add(
+            "off"
+        );
+
+
+        /*
+            Stop normal background
+            music before birthday song.
+        */
+
+        music.pause();
+
+        playing = false;
+
+        musicBtn.innerHTML = "♫";
+
+
+        /*
+            Play Happy Birthday song.
+        */
+
+        birthdaySong.currentTime = 0;
+
+
+        birthdaySong.play().catch(
+            () => {}
+        );
+
+
+        /*
+            Start star shower.
+        */
+
+        startStarShower();
+
+    }
+);
+
+
+/* =====================================================
+   STAR SHOWER
+===================================================== */
+
+function createFallingStar(){
+
+    const star =
+        document.createElement(
+            "div"
+        );
+
+
+    star.className =
+        "star";
+
+
+    /*
+        Different symbols make
+        the falling stars feel
+        more natural.
+    */
+
+    const symbols = [
+
+        "✦",
+
+        "✧",
+
+        "⋆",
+
+        "✦",
+
+        "·"
+
+    ];
+
+
+    star.innerHTML =
+        symbols[
+            Math.floor(
+                Math.random()
+                * symbols.length
+            )
+        ];
+
+
+    /*
+        Random horizontal position.
+    */
+
+    star.style.left =
+        Math.random() * 100
+        + "vw";
+
+
+    /*
+        Random size.
+    */
+
+    const size =
+        Math.random() * 14 + 5;
+
+
+    star.style.setProperty(
+        "--size",
+        size + "px"
+    );
+
+
+    /*
+        Random brightness.
+    */
+
+    const opacity =
+        Math.random() * .6 + .4;
+
+
+    star.style.setProperty(
+        "--opacity",
+        opacity
+    );
+
+
+    /*
+        Random falling duration.
+    */
+
+    const duration =
+        Math.random() * 2.5 + 2.5;
+
+
+    star.style.setProperty(
+        "--duration",
+        duration + "s"
+    );
+
+
+    /*
+        Natural sideways movement.
+    */
+
+    const drift =
+        (Math.random() - .5)
+        * 180;
+
+
+    const drift2 =
+        (Math.random() - .5)
+        * 300;
+
+
+    star.style.setProperty(
+        "--drift",
+        drift + "px"
+    );
+
+
+    star.style.setProperty(
+        "--drift2",
+        drift2 + "px"
+    );
+
+
+    document.body.appendChild(
+        star
+    );
+
+
+    /*
+        Remove star after animation.
+    */
+
+    setTimeout(
+        () => {
+
+            star.remove();
+
+        },
+
+        (duration + .5) * 1000
+
+    );
+
+}
+
+
+/* =====================================================
+   START STAR SHOWER
+===================================================== */
+
+function startStarShower(){
+
+    /*
+        Initial burst.
+    */
+
+    for(
+        let i = 0;
+        i < 70;
+        i++
+    ){
+
+        setTimeout(
+            () => {
+
+                createFallingStar();
+
+            },
+
+            Math.random() * 1200
+
+        );
+
+    }
+
+
+    /*
+        Continuous star shower.
+    */
+
+    let showerCount = 0;
+
+
+    const shower =
+        setInterval(
+            () => {
+
+                for(
+                    let i = 0;
+                    i < 4;
+                    i++
+                ){
+
+                    createFallingStar();
+
+                }
+
+
+                showerCount++;
+
+
+                /*
+                    Around 30 seconds.
+                */
+
+                if(
+                    showerCount >= 150
+                ){
+
+                    clearInterval(
+                        shower
+                    );
+
+                }
+
+            },
+
+            200
+
+        );
+
+}
+
+
+/* =====================================================
+   OPEN LETTER
+===================================================== */
+
+openLetterBtn.addEventListener(
+    "click",
+    () => {
+
+        /*
+            Open envelope.
+        */
+
+        envelope.classList.add(
+            "open"
+        );
+
+
+        /*
+            Wait for envelope
+            animation.
+        */
+
+        setTimeout(
+            () => {
+
+                letterLines.forEach(
+                    (line,index) => {
+
+                        setTimeout(
+                            () => {
+
+                                line.classList.add(
+                                    "show"
+                                );
+
+                            },
+
+                            index * 1200
+
+                        );
+
+                    }
+                );
+
+            },
+
+            1000
+
+        );
+
+    }
+);
+
+
+/* =====================================================
+   BACKGROUND PARTICLES
+===================================================== */
+
+const canvas =
+    document.getElementById(
+        "particles"
+    );
+
+
+const ctx =
+    canvas.getContext("2d");
+
+
+let particles = [];
+
+
+function resizeCanvas(){
+
+    canvas.width =
+        window.innerWidth;
+
+
+    canvas.height =
+        window.innerHeight;
+
+}
+
+
+resizeCanvas();
+
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
+function createParticles(){
+
+    particles = [];
+
+
+    for(
+        let i = 0;
+        i < 45;
+        i++
+    ){
+
+        particles.push({
+
+            x:
+                Math.random()
+                * canvas.width,
+
+            y:
+                Math.random()
+                * canvas.height,
+
+            size:
+                Math.random()
+                * 2 + .5,
+
+            speed:
+                Math.random()
+                * .4 + .1,
+
+            opacity:
+                Math.random()
+                * .5 + .2
+
+        });
+
+    }
+
+}
+
+
+createParticles();
+
+
+function animateParticles(){
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    particles.forEach(
+        p => {
+
+            p.y -= p.speed;
+
+
+            if(p.y < -10){
+
+                p.y =
+                    canvas.height + 10;
+
+                p.x =
+                    Math.random()
+                    * canvas.width;
+
+            }
+
+
+            ctx.beginPath();
+
+
+            ctx.arc(
+                p.x,
+                p.y,
+                p.size,
+                0,
+                Math.PI * 2
+            );
+
+
+            ctx.fillStyle =
+                `rgba(
+                    255,
+                    170,
+                    195,
+                    ${p.opacity}
+                )`;
+
+
+            ctx.fill();
+
+        }
+    );
+
+
+    requestAnimationFrame(
+        animateParticles
+    );
+
+}
+
+
+animateParticles();
+
+
+/* =====================================================
+   HEARTS ON CLICK
+===================================================== */
+
+document.addEventListener(
+    "click",
+    (e) => {
+
+        /*
+            Don't create hearts when
+            clicking buttons/candle.
+        */
+
+        if(
+            e.target.closest(
+                "button"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        if(
+            e.target.closest(
+                ".candle"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.innerHTML =
+            "♥";
+
+
+        heart.style.position =
+            "fixed";
+
+
+        heart.style.left =
+            e.clientX + "px";
+
+
+        heart.style.top =
+            e.clientY + "px";
+
+
+        heart.style.color =
+            "#e94d7d";
+
+
+        heart.style.fontSize =
+            "18px";
+
+
+        heart.style.pointerEvents =
+            "none";
+
+
+        heart.style.zIndex =
+            "9999";
+
+
+        heart.style.transition =
+            "1.2s ease";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(
+            () => {
+
+                heart.style.transform =
+                    "translateY(-100px) scale(1.5)";
+
+
+                heart.style.opacity =
+                    "0";
+
+            },
+
+            20
+        );
+
+
+        setTimeout(
+            () => {
+
+                heart.remove();
+
+            },
+
+            1300
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
